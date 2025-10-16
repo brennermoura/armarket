@@ -7,12 +7,13 @@ import { X } from "lucide-react";
 import { expositoresVinhos } from "@/assets/expositores-vinhos/gallery-vinhos";
 import { expositoresHortifruti } from "@/assets/expositores-hortifruti/gallery-hortifruti";
 import { expositoresPadarias } from "@/assets/expositores-padarias/gallery-padarias";
+import { expositoresDiversos } from "@/assets/expositores-diversos/gallery-diversos";
 
 // Crie uma lista para cada categoria
 const adegaItems = expositoresVinhos.map((image, index) => ({
   id: `adega-${index + 1}`,
-  title: `Expositor de Vinhos ${index + 1}`,
-  category: "Expositores Adegas",
+  title: `Expositor de Bebidas ${index + 1}`,
+  category: "Expositores Bebidas",
   image: image,
   description: `Descrição do Expositor de Vinhos ${index + 1}.`,
 }));
@@ -33,13 +34,27 @@ const padariaItems = expositoresPadarias.map((image, index) => ({
   description: `Descrição do Expositor de Padaria ${index + 1}.`,
 }));
 
+const diversosItems = expositoresDiversos.map((image, index) => ({
+  id: `padaria-${index + 1}`,
+  title: `Expositor diverso ${index + 1}`,
+  category: "Expositores Diversos",
+  image: image,
+  description: `Descrição do Expositor variado ${index + 1}.`,
+}));
+
 // Combine todas as listas em um único array
-const allGalleryItems = [...hortifrutiItems, ...adegaItems, ...padariaItems];
+const allGalleryItems = [
+  ...hortifrutiItems,
+  ...adegaItems,
+  ...padariaItems,
+  ...diversosItems,
+];
 
 const categories = [
   "Expositores Hortifruti",
-  "Expositores Adegas",
+  "Expositores Bebidas",
   "Expositores Padarias",
+  "Expositores Diversos",
 ];
 
 export default function Gallery() {

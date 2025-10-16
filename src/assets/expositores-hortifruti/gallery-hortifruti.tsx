@@ -10,10 +10,14 @@ import image07 from "./07.jpg";
 import image08 from "./08.jpg";
 import image09 from "./09.jpg";
 import image10 from "./10.jpg";
-import image11 from "./11.jpg";
-import image12 from "./12.jpg";
-import image13 from "./13.jpg";
-import image14 from "./14.jpg";
+import image11 from "./11.png";
+import image12 from "./12.png";
+import image13 from "./13.png";
+import image14 from "./14.png";
+import image15 from "./15.jpg";
+import image16 from "./16.jpg";
+import image17 from "./17.jpg";
+import image18 from "./18.jpg";
 
 // Exporte um array com todas as imagens para ser usado no seu componente.
 export const expositoresHortifruti = [
@@ -31,4 +35,8 @@ export const expositoresHortifruti = [
   image12,
   image13,
   image14,
+  image15,
+  image16,
+  image17,
+  image18,
 ];

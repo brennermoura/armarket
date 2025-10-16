@@ -11,10 +11,6 @@ import image08 from "./08.jpg";
 import image09 from "./09.jpg";
 import image10 from "./10.jpg";
 import image11 from "./11.jpg";
-import image12 from "./12.jpg";
-import image13 from "./13.jpg";
-import image14 from "./14.jpg";
-import image15 from "./15.jpg";
 
 // Exporte um array com todas as imagens para ser usado no seu componente.
 export const expositoresVinhos = [
@@ -29,8 +25,4 @@ export const expositoresVinhos = [
   image09,
   image10,
   image11,
-  image12,
-  image13,
-  image14,
-  image15,
 ];
