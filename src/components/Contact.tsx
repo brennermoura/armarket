@@ -15,18 +15,33 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+
+    const phoneNumber = "5521965755458"; // número com DDI + DDD
+    const text = `
+Mensagem do site AR Market 🚀
+
+Nome: ${formData.name}
+E-mail: ${formData.email}
+Telefone: ${formData.phone || "Não informado"}
+Mensagem: ${formData.message}
+`;
+
+    const encodedText = encodeURIComponent(text);
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedText}`;
+
+    window.open(whatsappUrl, "_blank");
+
     toast({
-      title: "Mensagem enviada!",
-      description: "Entraremos em contato em breve.",
+      title: "Redirecionando para o WhatsApp...",
+      description: "Finalize o envio por lá 📲",
     });
+
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
@@ -159,7 +174,7 @@ const Contact = () => {
                     type="submit"
                     className="brand-button w-full md:w-auto"
                   >
-                    Enviar Mensagem
+                    Enviar via WhatsApp
                   </Button>
                 </form>
               </CardContent>
