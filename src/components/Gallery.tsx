@@ -133,36 +133,21 @@ export default function Gallery() {
           open={!!selectedImage}
           onOpenChange={() => setSelectedImage(null)}
         >
-          <DialogContent className="max-w-4xl p-5 overflow-hidden">
+          <DialogContent className="w-[95vw] max-w-4xl p-0 overflow-hidden rounded-lg bg-black flex items-center justify-center">
             {selectedImage && (
-              <div className="relative">
+              <div className="relative w-full flex items-center justify-center">
                 <button
                   onClick={() => setSelectedImage(null)}
-                  className="absolute top-4 right-4 z-10 p-2 bg-black/50 rounded-full text-white hover:bg-black/70 transition-colors"
+                  className="absolute top-3 right-3 z-10 p-2 bg-black/60 rounded-full text-white hover:bg-black/80 transition-colors"
                 >
                   <X className="w-5 h-5" />
                 </button>
-                <div className="aspect-video">
-                  <img
-                    src={selectedImage.image}
-                    alt={selectedImage.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                {/* <div className="p-6">
-                  <div className="flex items-center space-x-3 mb-3">
-                    <h3 className="text-xl font-semibold text-gray-900">
-                      {selectedImage.title}
-                    </h3>
-                    <Badge
-                      variant="outline"
-                      className="border-amber-800 text-amber-800"
-                    >
-                      {selectedImage.category}
-                    </Badge>
-                  </div>
-                  <p className="text-gray-600">{selectedImage.description}</p>
-                </div> */}
+
+                <img
+                  src={selectedImage.image}
+                  alt={selectedImage.title}
+                  className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
+                />
               </div>
             )}
           </DialogContent>
